@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  box-shadow: 10px 10px 10px 0px rgba(199,199,199,1);
+  border-bottom: 1px solid grey;
+}
+
+.header a {
+  text-decoration: none;
+  color: #161616;
+}
+.name {
+  text-align: center;
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.navigation-wrapper {
+  max-width: 48rem;
+  margin: auto;
+}
+
+.navigation {
+  min-width: 24rem;
+}
+
+.navigation ul {
+  padding: inherit;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.active {
+  font-weight: 700;
+}

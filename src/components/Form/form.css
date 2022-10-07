@@ -1,0 +1,17 @@
+form > * {
+  margin-bottom: 1rem;
+}
+
+.form-wrapper {
+  display: flex;
+}
+
+form {
+  margin: auto;
+  width: 20rem;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+}
