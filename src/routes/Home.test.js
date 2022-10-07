@@ -11,6 +11,8 @@ describe('Home Page', () => {
 
   it('possède un lien qui redirige vers la page articles', () => {
     render(<Home />, {wrapper: BrowserRouter});
-    // ...
+    const linkElement = screen.getByRole('link')
+    expect(linkElement).toBeInTheDocument();
+    expect(linkElement).toHaveAttribute('href', '/articles');
   })
 });
