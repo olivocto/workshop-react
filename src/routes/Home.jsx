@@ -1,9 +1,8 @@
 import { Link } from "react-router-dom";
-import Layout from '../components/Layout/Layout'
 import '../styles.css'
 function Home() {
   return (
-    <Layout>
+    <>
        <h1>Lorem Ipsum</h1>
        <p className="accueil-paragraphe">
        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
@@ -17,7 +16,7 @@ function Home() {
        <div className="accueil-cta-wrapper">
         <Link className="cta" to="/articles">Voir les articles ></Link>
        </div>
-    </Layout>
+    </>
   );
 }
 

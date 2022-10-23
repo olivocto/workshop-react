@@ -1,5 +1,5 @@
 import { render, screen, within } from '@testing-library/react';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom';
 import Header from './Header';
 
 describe('Header Component', () => {
@@ -17,16 +17,30 @@ describe('Header Component', () => {
 
   it('possède 4 liens de redirection', () => {
     render(<Header />, {wrapper: BrowserRouter});
-    const navElement = screen.getByRole('navigation')
-    const linkElementList = within(navElement).getAllByRole('link')
-    expect(linkElementList[0]).toHaveTextContent('Accueil');
-    expect(linkElementList[0]).toHaveAttribute('href', '/');
-    expect(linkElementList[1]).toHaveTextContent('Publier');
-    expect(linkElementList[1]).toHaveAttribute('href', '/post');
-    expect(linkElementList[2]).toHaveTextContent('Articles');
-    expect(linkElementList[2]).toHaveAttribute('href', '/articles');
-    expect(linkElementList[3]).toHaveTextContent('Météo');
-    expect(linkElementList[3]).toHaveAttribute('href', '/wheather');
+    const navElement = screen.getByRole('navigation');
+    const linkElementList = within(navElement).getAllByRole('link');
+    const expected = [
+      {
+        textContent: 'Accueil',
+        attributeHref: '/',
+      },
+      {
+        textContent: 'Publier',
+        attributeHref: '/post',
+      },
+      {
+        textContent: 'Articles',
+        attributeHref: '/articles',
+      },
+      {
+        textContent: 'Météo',
+        attributeHref: '/weather',
+      },
+    ]
+    linkElementList.map((element, index) => {
+      expect(linkElementList[index]).toHaveTextContent(expected[index].textContent);
+      expect(linkElementList[index]).toHaveAttribute('href', expected[index.attributeHref]);
+    })
   })
 
 });

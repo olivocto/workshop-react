@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import {useParams, Link} from 'react-router-dom';
-import Layout from '../Layout/Layout';
 import './article.css'
 
 function Article() {
@@ -35,7 +34,7 @@ function Article() {
   }
 
   return (
-   <Layout>
+   <>
   <Link className="cta" to='/articles'>{'< '}Retour aux articles</Link>
      { !isLoading && (
        <>
@@ -55,7 +54,7 @@ function Article() {
         </ul>
         </>
         )}
-   </Layout>
+   </>
    );
 }
 

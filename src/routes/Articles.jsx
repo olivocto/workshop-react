@@ -1,7 +1,6 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import Layout from '../components/Layout/Layout';
 import { Link } from 'react-router-dom';
 
 
@@ -23,8 +22,8 @@ function ArticlesPage() {
   }
 
   return (
-   <Layout>
-      <h1>liste articles</h1>
+   <>
+      <h1>liste des articles</h1>
       { !isLoading && (
         <ul className="card-list">
           { articleList.map((article, index) => (
@@ -35,7 +34,7 @@ function ArticlesPage() {
             </li>))}
         </ul>
         )}
-   </Layout>
+   </>
    );
 }
 
