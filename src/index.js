@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import './index.css';
 
 import HomePage from './routes/Home';
 import ArticlesPage from './routes/Articles';
 import PostPage from './routes/Post';
-import WheatherPage from './routes/Wheather';
+import WeatherPage from './routes/Weather';
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -24,7 +25,7 @@ root.render(
         <Route path="/post" element={<PostPage />} />
         <Route path="/articles" element={<ArticlesPage />} />
         <Route path="/articles/:id" element={<Article />} />
-        <Route path="/wheather" element={<WheatherPage />} />
+        <Route path="/weather" element={<WeatherPage />} />
       </Routes>
     </Layout>
 
@@ -32,3 +33,5 @@ root.render(
   <Footer/>
 </BrowserRouter>
 );
+
+serviceWorkerRegistration.register()

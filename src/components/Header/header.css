@@ -21,15 +21,18 @@
   margin: auto;
 }
 
-.navigation {
+nav {
   min-width: 24rem;
+  max-width: 48rem;
+  margin: auto;
 }
 
-.navigation ul {
-  padding: inherit;
-  list-style-type: none;
+nav ul {
   display: flex;
   justify-content: space-around;
+  padding: inherit;
+  list-style-type: none;
+
 }
 
 .active {

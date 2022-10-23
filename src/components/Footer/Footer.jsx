@@ -4,7 +4,7 @@ import './footer.css'
 const Footer = () => {
   return (
     <footer className="footer">
-    <p>Workshop des Bases du Dev Web - Formation Skool 24</p>
+    <p>Skool 24</p>
   </footer>
   );
 };
